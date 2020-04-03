@@ -65,3 +65,7 @@ Which produces a table like:
 | GTX 2080 ti                 | 1                          |
 +-----------------------------+----------------------------+
 ```
+
+Or with colors
+
+![](table_format.png)
