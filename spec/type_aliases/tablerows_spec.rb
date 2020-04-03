@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'TableRows' do
-  it { is_expected.to allow_value('square') }
-  it { is_expected.not_to allow_value('circle') }
+describe 'Format::TableRows' do
+  it { is_expected.to allow_value([['one', 2], ['two', 2]]) }
+  it { is_expected.not_to allow_value({'one' => '2'}) }
 end
