@@ -19,11 +19,11 @@ With this module you can produce amazing looking tables, colorized strings and o
 
 ## Setup
 
-### What format affects **OPTIONAL**
+### What format affects
 
 This module includes functions and datatypes only. 
 
-### Setup Requirements **OPTIONAL**
+### Setup Requirements
 
 Bolt and Puppet
 

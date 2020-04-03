@@ -1,10 +1,10 @@
 {
-  "name": "nwops-format",
+  "name": "puppet-format",
   "version": "0.1.0",
-  "author": "corey@nwops.io",
+  "author": "voxpupuli",
   "summary": "Puppet formatting functions to transform text into rich text",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/voxpupuli/puppet-format.git",
   "dependencies": [
 
   ],
