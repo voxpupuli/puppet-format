@@ -50,16 +50,13 @@ Puppet::Functions.create_function(:'format::table') do
   end
 
   def print_table(rows)
-    table = Terminal::Table.new do |t|
-      t.rows = rows
-    end
-    table.to_s
+    print_table_hash({'rows' => rows})
   end
 
   def print_table_hash(data)
     tdata = data.transform_keys(&:to_sym)
     table = Terminal::Table.new do |t|
-      t.rows = tdata[:rows]
+      t.rows = tdata[:rows].empty? ? [tdata[:rows]] : tdata[:rows]
       t.title = tdata[:title]
       t.headings = tdata[:head] if tdata[:head]
       t.style = tdata[:style].transform_keys(&:to_sym) if tdata[:style]

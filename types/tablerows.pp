@@ -1,1 +1,1 @@
-type Format::TableRows = Array[Array]
+type Format::TableRows = Variant[Array[0,0],Array[Array]]
