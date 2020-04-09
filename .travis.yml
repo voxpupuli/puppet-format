@@ -47,3 +47,9 @@ branches:
     - /^v\d/
 notifications:
   email: false
+  irc:
+    on_success: always
+    on_failure: always
+    channels:
+    - chat.freenode.org#voxpupuli-notifications
+  webhooks: https://voxpupu.li/incoming/travis
