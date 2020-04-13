@@ -16,7 +16,28 @@ end
 ruby_version_segments = Gem::Version.new(RUBY_VERSION.dup).segments
 minor_version = ruby_version_segments[0..1].join('.')
 
+group :test do
+  gem "puppet-lint-absolute_classname-check", '>= 2.0.0',          require: false
+  gem "puppet-lint-anchor-check",                                  require: false
+  gem "puppet-lint-classes_and_types_beginning_with_digits-check", require: false
+  gem "puppet-lint-leading_zero-check",                            require: false
+  gem "puppet-lint-legacy_facts-check",                            require: false
+  gem "puppet-lint-topscope-variable-check",                       require: false
+  gem "puppet-lint-trailing_comma-check",                          require: false
+  gem "puppet-lint-unquoted_string-check",                         require: false
+  gem "puppet-lint-variable_contains_upcase",                      require: false
+  gem "puppet-lint-version_comparison-check",                      require: false
+  gem "puppet-lint-resource_reference_syntax",                     require: false
+  gem "coveralls",                                                 require: false
+end
+group :system_tests do
+  gem "voxpupuli-acceptance", require: false
+end
 group :development do
+  gem "travis",                                                  require: false
+  gem "travis-lint",                                             require: false
+  gem "guard-rake",                                              require: false
+  gem "overcommit", '>= 0.39.1',                                 require: false
   gem "fast_gettext", '1.1.0',                                   require: false if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new('2.1.0')
   gem "fast_gettext",                                            require: false if Gem::Version.new(RUBY_VERSION.dup) >= Gem::Version.new('2.1.0')
   gem "json_pure", '<= 2.0.1',                                   require: false if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new('2.0.0')

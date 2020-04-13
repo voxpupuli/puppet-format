@@ -84,6 +84,6 @@
     }
   ],
   "pdk-version": "1.17.0",
-  "template-url": "pdk-default#1.17.0",
-  "template-ref": "tags/1.17.0-0-gd3a4319"
+  "template-url": "/Users/cosman/voxpupuli/pdk-templates#vp-1.17.0",
+  "template-ref": "heads/vp-1.17.0-0-ga3dbfe2"
 }

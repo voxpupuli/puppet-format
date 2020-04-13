@@ -6,6 +6,8 @@ require 'puppet-syntax/tasks/puppet-syntax'
 require 'puppet_blacksmith/rake_tasks' if Bundler.rubygems.find_name('puppet-blacksmith').any?
 require 'github_changelog_generator/task' if Bundler.rubygems.find_name('github_changelog_generator').any?
 require 'puppet-strings/tasks' if Bundler.rubygems.find_name('puppet-strings').any?
+require 'voxpupuli_rake_tasks' if 
+require 'voxpupuli/release/rake_tasks' if Bundler.rubygems.find_name('voxpupuli-release').any?
 
 def changelog_user
   return unless Rake.application.top_level_tasks.include? "changelog"
@@ -41,14 +43,27 @@ def changelog_future_release
 end
 
 PuppetLint.configuration.send('disable_relative')
-
+PuppetLint.configuration.send('disable_140chars')
+PuppetLint.configuration.send('disable_class_inherits_from_params_class')
+PuppetLint.configuration.send('disable_documentation')
+PuppetLint.configuration.send('disable_single_quote_string_with_variables')
+exclude_paths = %w(
+  pkg/**/*
+  vendor/**/*
+  .vendor/**/*
+  spec/**/*
+)
+PuppetLint.configuration.ignore_paths = exclude_paths
+PuppetSyntax.exclude_paths = exclude_paths
+PuppetLint.configuration.fail_on_warnings = true
+PuppetLint.configuration.log_format = '%{path}:%{line}:%{check}:%{KIND}:%{message}'
 if Bundler.rubygems.find_name('github_changelog_generator').any?
   GitHubChangelogGenerator::RakeTask.new :changelog do |config|
     raise "Set CHANGELOG_GITHUB_TOKEN environment variable eg 'export CHANGELOG_GITHUB_TOKEN=valid_token_here'" if Rake.application.top_level_tasks.include? "changelog" and ENV['CHANGELOG_GITHUB_TOKEN'].nil?
     config.user = "#{changelog_user}"
     config.project = "#{changelog_project}"
     config.future_release = "#{changelog_future_release}"
-    config.exclude_labels = ['maintenance']
+    config.exclude_labels = "%w{duplicate question invalid wontfix wont-fix modulesync skip-changelog}"
     config.header = "# Change log\n\nAll notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org)."
     config.add_pr_wo_labels = true
     config.issues = false
@@ -86,3 +101,4 @@ EOM
   end
 end
 
+# vim: syntax=ruby

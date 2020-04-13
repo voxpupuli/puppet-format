@@ -1,9 +1,3 @@
-begin
-  require 'terminal-table'
-rescue LoadError => e
-  Puppet.error("Terminal-table gem not found, please install: gem install terminal-table")
-end
-
 # @summary Turns arrays into a table formatted string for human consumption
 #
 #
@@ -22,10 +16,8 @@ end
 #
 # @note For a list of style options that can be supplied please see the tablestyle datatype.
 Puppet::Functions.create_function(:'format::table') do
-  default_table_width = 40
-
   # @param rows That data you wish to transform into a table.
-  # @return [String] A formatted table in string form. 
+  # @return [String] A formatted table in string form.
   # @example Calling the function
   #   $t = format::table([['one', 1], ['two', 2]])
   #   => "+-----+---+\n| One | 1 |\n| Two | 2 |\n+-----+---+"
@@ -37,7 +29,7 @@ Puppet::Functions.create_function(:'format::table') do
   end
 
   # @param data That data and other settings you wish to produce a table with.
-  # @return [String] A formatted table in string form. 
+  # @return [String] A formatted table in string form.
   # @example Calling the function
   #   $rows = [['one', 1], ['two', 2]]
   #   $t = format::table({'title' => 'Some title', 'rows' => rows, 'style' => {width => 80}})
@@ -50,10 +42,11 @@ Puppet::Functions.create_function(:'format::table') do
   end
 
   def print_table(rows)
-    print_table_hash({'rows' => rows})
+    print_table_hash('rows' => rows)
   end
 
   def print_table_hash(data)
+    require 'terminal-table'
     tdata = data.transform_keys(&:to_sym)
     table = Terminal::Table.new do |t|
       t.rows = tdata[:rows].empty? ? [tdata[:rows]] : tdata[:rows]
@@ -62,6 +55,8 @@ Puppet::Functions.create_function(:'format::table') do
       t.style = tdata[:style].transform_keys(&:to_sym) if tdata[:style]
     end
     table.to_s
+  rescue LoadError
+    message = 'Terminal-table gem not found, please install: gem install terminal-table'
+    raise LoadError, message
   end
-
 end

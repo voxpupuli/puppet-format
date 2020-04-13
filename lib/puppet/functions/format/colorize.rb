@@ -64,6 +64,6 @@ Puppet::Functions.create_function(:'format::colorize') do
   end
 
   def yellow(data)
-    colorize_hex(data,33)
+    colorize_hex(data, 33)
   end
 end
