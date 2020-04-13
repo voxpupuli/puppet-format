@@ -1,9 +1,3 @@
-begin
-  require 'terminal-table'
-rescue LoadError
-  Puppet.error('Terminal-table gem not found, please install: gem install terminal-table')
-end
-
 # @summary Turns arrays into a table formatted string for human consumption
 #
 #
@@ -52,6 +46,7 @@ Puppet::Functions.create_function(:'format::table') do
   end
 
   def print_table_hash(data)
+    require 'terminal-table'
     tdata = data.transform_keys(&:to_sym)
     table = Terminal::Table.new do |t|
       t.rows = tdata[:rows].empty? ? [tdata[:rows]] : tdata[:rows]
@@ -60,5 +55,8 @@ Puppet::Functions.create_function(:'format::table') do
       t.style = tdata[:style].transform_keys(&:to_sym) if tdata[:style]
     end
     table.to_s
+  rescue LoadError
+    message = 'Terminal-table gem not found, please install: gem install terminal-table'
+    raise LoadError, message
   end
 end
