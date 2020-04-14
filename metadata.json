@@ -84,6 +84,6 @@
     }
   ],
   "pdk-version": "1.17.0",
-  "template-url": "/Users/cosman/voxpupuli/pdk-templates#vp-1.17.0",
-  "template-ref": "heads/vp-1.17.0-0-ga3dbfe2"
+  "template-url": "https://github.com/voxpupuli/pdk-templates#vp-1.17.0",
+  "template-ref": "remotes/origin/vp-1.17.0-0-gd31229b"
 }
