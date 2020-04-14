@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.0](https://github.com/voxpupuli/puppet-format/tree/0.1.0) (2020-04-14)
+## [v0.1.0](https://github.com/voxpupuli/puppet-format/tree/0.1.0) (2020-04-14)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-format/compare/0ff24f56ff35bacf4f9ff2d87b31971aac7d290f...0.1.0)
 
