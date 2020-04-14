@@ -167,7 +167,7 @@ That data and other settings you wish to produce a table with.
 
 The Format::TableRows data type.
 
-Alias of `Array[Array]`
+Alias of `Variant[Array[0,0], Array[Array]]`
 
 ### Format::TableStyle
 

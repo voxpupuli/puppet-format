@@ -6,7 +6,6 @@ require 'puppet-syntax/tasks/puppet-syntax'
 require 'puppet_blacksmith/rake_tasks' if Bundler.rubygems.find_name('puppet-blacksmith').any?
 require 'github_changelog_generator/task' if Bundler.rubygems.find_name('github_changelog_generator').any?
 require 'puppet-strings/tasks' if Bundler.rubygems.find_name('puppet-strings').any?
-require 'voxpupuli_rake_tasks' if 
 require 'voxpupuli/release/rake_tasks' if Bundler.rubygems.find_name('voxpupuli-release').any?
 
 def changelog_user
