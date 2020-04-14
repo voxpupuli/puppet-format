@@ -39,6 +39,8 @@ jobs:
       rvm: 2.5.7
       stage: spec
     -
+      rvm: 2.5.7
+      bundler_args: --without system_tests
       env: DEPLOY_TO_FORGE=yes
       stage: deploy
 branches:
