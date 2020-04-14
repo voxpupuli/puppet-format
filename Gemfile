@@ -16,6 +16,10 @@ end
 ruby_version_segments = Gem::Version.new(RUBY_VERSION.dup).segments
 minor_version = ruby_version_segments[0..1].join('.')
 
+group :release do
+  gem "voxpupuli-release",          require: false, git: 'https://github.com/voxpupuli/voxpupuli-release-gem'
+  gem "github_changelog_generator", require: false, git: 'https://github.com/voxpupuli/github-changelog-generator', branch: 'voxpupuli_essential_fixes'
+end
 group :test do
   gem "puppet-lint-absolute_classname-check", '>= 2.0.0',          require: false
   gem "puppet-lint-anchor-check",                                  require: false
