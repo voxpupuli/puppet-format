@@ -15,13 +15,13 @@ This module includes puppet functions to transform your boring, old and worn loo
 
 ## Description
 
-With this module you can produce amazing looking tables, colorized strings and others transformations for output to the terminal screen.  While this module is mainly for bolt plans it could be used in puppet code anywhere. 
+With this module you can produce amazing looking tables, colorized strings and others transformations for output to the terminal screen.  While this module is mainly for bolt plans it could be used in puppet code anywhere.
 
 ## Setup
 
 ### What format affects
 
-This module includes functions and datatypes only. 
+This module includes functions and datatypes only.
 
 ### Setup Requirements
 
@@ -38,11 +38,11 @@ formatted data ready to be sent to stdout or stderr.
 * format::table([['one', 1], ['two', 2]])
 
 The print_table function wraps the [Terminal-Table](https://github.com/tj/terminal-table) ruby gem in a function
-and tries to provide the same API.  You can create a table in two ways.  
+and tries to provide the same API.  You can create a table in two ways.
   * by passing a TableRows type  (Array of Arrays)
   * by passing a TerminalTable type (Hash of various keys)
 
-Example: 
+Example:
 
 ```shell
 # puppet code
