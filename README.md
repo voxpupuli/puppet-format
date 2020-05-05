@@ -1,4 +1,11 @@
-# Format Module
+# puppet-format
+
+[![Build Status](https://img.shields.io/travis/voxpupuli/puppet-format/master.svg?style=flat-square)](https://travis-ci.org/voxpupuli/puppet-format)
+[![License](https://img.shields.io/github/license/voxpupuli/puppet-format.svg)](https://github.com/voxpupuli/puppet-format/blob/master/LICENSE)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/puppet/format.svg?style=flat-square)](https://forge.puppetlabs.com/puppet/format)
+[![Puppet Forge](https://img.shields.io/puppetforge/dt/puppet/format.svg?style=flat-square)](https://forge.puppet.com/puppet/format)
+[![Puppet Forge](https://img.shields.io/puppetforge/e/puppet/format.svg?style=flat-square)](https://forge.puppet.com/puppet/format)
+[![Puppet Forge](https://img.shields.io/puppetforge/f/puppet/format.svg?style=flat-square)](https://forge.puppet.com/puppet/format)
 
 This module includes puppet functions to transform your boring, old and worn looking ascii characters into beautiful looking masterpieces.
 
@@ -15,13 +22,13 @@ This module includes puppet functions to transform your boring, old and worn loo
 
 ## Description
 
-With this module you can produce amazing looking tables, colorized strings and others transformations for output to the terminal screen.  While this module is mainly for bolt plans it could be used in puppet code anywhere. 
+With this module you can produce amazing looking tables, colorized strings and others transformations for output to the terminal screen.  While this module is mainly for bolt plans it could be used in puppet code anywhere.
 
 ## Setup
 
 ### What format affects
 
-This module includes functions and datatypes only. 
+This module includes functions and datatypes only.
 
 ### Setup Requirements
 
@@ -38,11 +45,11 @@ formatted data ready to be sent to stdout or stderr.
 * format::table([['one', 1], ['two', 2]])
 
 The print_table function wraps the [Terminal-Table](https://github.com/tj/terminal-table) ruby gem in a function
-and tries to provide the same API.  You can create a table in two ways.  
+and tries to provide the same API.  You can create a table in two ways.
   * by passing a TableRows type  (Array of Arrays)
   * by passing a TerminalTable type (Hash of various keys)
 
-Example: 
+Example:
 
 ```shell
 # puppet code
