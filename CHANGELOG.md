@@ -1,11 +1,22 @@
-# Changelog
+# Change log
 
-## [v0.1.0](https://github.com/voxpupuli/puppet-format/tree/0.1.0) (2020-04-14)
+All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-[Full Changelog](https://github.com/voxpupuli/puppet-format/compare/0ff24f56ff35bacf4f9ff2d87b31971aac7d290f...0.1.0)
+## [v0.1.1](https://github.com/voxpupuli/puppet-format/tree/v0.1.1) (2020-06-10)
 
-**Merged pull requests:**
+[Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v0.1.0...v0.1.1)
 
+### UNCATEGORIZED PRS; GO LABEL THEM
+
+- purge whitespace in README.md / Add badges to README.md / add Apache-2 license file [\#4](https://github.com/voxpupuli/puppet-format/pull/4) ([bastelfreak](https://github.com/bastelfreak))
+
+## [v0.1.0](https://github.com/voxpupuli/puppet-format/tree/v0.1.0) (2020-04-14)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-format/compare/0ff24f56ff35bacf4f9ff2d87b31971aac7d290f...v0.1.0)
+
+### UNCATEGORIZED PRS; GO LABEL THEM
+
+- Prepare for release [\#3](https://github.com/voxpupuli/puppet-format/pull/3) ([logicminds](https://github.com/logicminds))
 - Add pdk updates [\#2](https://github.com/voxpupuli/puppet-format/pull/2) ([logicminds](https://github.com/logicminds))
 - Add pdk updates [\#1](https://github.com/voxpupuli/puppet-format/pull/1) ([logicminds](https://github.com/logicminds))
 
