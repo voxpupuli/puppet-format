@@ -16,7 +16,7 @@ script:
   - 'bundle exec rake $CHECK'
 bundler_args: --without system_tests release
 rvm:
-  - 2.5.7
+  - 2.5.8
 stages:
   - static
   - spec
@@ -32,15 +32,13 @@ jobs:
       stage: static
     -
       env: PUPPET_GEM_VERSION="~> 5.0" CHECK=parallel_spec
-      rvm: 2.4.5
+      rvm: 2.4.9
       stage: spec
     -
       env: PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec
-      rvm: 2.5.7
+      rvm: 2.5.8
       stage: spec
     -
-      rvm: 2.5.7
-      bundler_args: --without system_tests
       env: DEPLOY_TO_FORGE=yes
       stage: deploy
 branches:
