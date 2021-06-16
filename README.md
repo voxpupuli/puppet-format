@@ -1,11 +1,11 @@
 # puppet-format
 
-[![Build Status](https://img.shields.io/travis/voxpupuli/puppet-format/master.svg?style=flat-square)](https://travis-ci.org/voxpupuli/puppet-format)
-[![License](https://img.shields.io/github/license/voxpupuli/puppet-format.svg)](https://github.com/voxpupuli/puppet-format/blob/master/LICENSE)
-[![Puppet Forge](https://img.shields.io/puppetforge/v/puppet/format.svg?style=flat-square)](https://forge.puppetlabs.com/puppet/format)
-[![Puppet Forge](https://img.shields.io/puppetforge/dt/puppet/format.svg?style=flat-square)](https://forge.puppet.com/puppet/format)
-[![Puppet Forge](https://img.shields.io/puppetforge/e/puppet/format.svg?style=flat-square)](https://forge.puppet.com/puppet/format)
-[![Puppet Forge](https://img.shields.io/puppetforge/f/puppet/format.svg?style=flat-square)](https://forge.puppet.com/puppet/format)
+[![CI](https://github.com/voxpupuli/puppet-format/actions/workflows/ci.yml/badge.svg)](https://github.com/voxpupuli/puppet-format/actions/workflows/ci.yml)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/puppet/format.svg)](https://forge.puppetlabs.com/puppet/format)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/puppet/format.svg)](https://forge.puppetlabs.com/puppet/format)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/puppet/format.svg)](https://forge.puppetlabs.com/puppet/format)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/puppet/format.svg)](https://forge.puppetlabs.com/puppet/format)
+[![Apache-2 License](https://img.shields.io/github/license/voxpupuli/puppet-format.svg)](LICENSE)
 
 This module includes puppet functions to transform your boring, old and worn looking ascii characters into beautiful looking masterpieces.
 
