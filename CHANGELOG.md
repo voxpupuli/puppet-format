@@ -1,12 +1,22 @@
-# Change log
+# Changelog
 
-All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
+All notable changes to this project will be documented in this file.
+Each new release typically also includes the latest modulesync defaults.
+These should not affect the functionality of the module.
+
+## [v1.0.0](https://github.com/voxpupuli/puppet-format/tree/v1.0.0) (2021-06-16)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v0.1.1...v1.0.0)
+
+**Breaking changes:**
+
+- Drop EoL Puppet 4/5 support; Add Puppet 7 support; fix tests for terminal-table 3 [\#7](https://github.com/voxpupuli/puppet-format/pull/7) ([bastelfreak](https://github.com/bastelfreak))
 
 ## [v0.1.1](https://github.com/voxpupuli/puppet-format/tree/v0.1.1) (2020-06-10)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v0.1.0...v0.1.1)
 
-### UNCATEGORIZED PRS; GO LABEL THEM
+**Merged pull requests:**
 
 - purge whitespace in README.md / Add badges to README.md / add Apache-2 license file [\#4](https://github.com/voxpupuli/puppet-format/pull/4) ([bastelfreak](https://github.com/bastelfreak))
 
@@ -14,7 +24,7 @@ All notable changes to this project will be documented in this file. The format 
 
 [Full Changelog](https://github.com/voxpupuli/puppet-format/compare/0ff24f56ff35bacf4f9ff2d87b31971aac7d290f...v0.1.0)
 
-### UNCATEGORIZED PRS; GO LABEL THEM
+**Merged pull requests:**
 
 - Prepare for release [\#3](https://github.com/voxpupuli/puppet-format/pull/3) ([logicminds](https://github.com/logicminds))
 - Add pdk updates [\#2](https://github.com/voxpupuli/puppet-format/pull/2) ([logicminds](https://github.com/logicminds))

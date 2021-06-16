@@ -1,7 +1,7 @@
 {
   "name": "puppet-format",
-  "version": "0.1.2-rc0",
-  "author": "voxpupuli",
+  "version": "1.0.0",
+  "author": "Vox Pupuli",
   "summary": "Puppet formatting functions to transform text into rich text",
   "license": "Apache-2.0",
   "source": "https://github.com/voxpupuli/puppet-format.git",
