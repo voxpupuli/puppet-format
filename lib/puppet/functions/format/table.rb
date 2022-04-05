@@ -52,7 +52,12 @@ Puppet::Functions.create_function(:'format::table') do
       t.rows = tdata[:rows].empty? ? [tdata[:rows]] : tdata[:rows]
       t.title = tdata[:title]
       t.headings = tdata[:head] if tdata[:head]
-      t.style = tdata[:style].transform_keys(&:to_sym) if tdata[:style]
+
+      unless tdata[:style].nil?
+        style = tdata[:style].transform_keys(&:to_sym)
+        style[:border] &&= style[:border].to_sym # This value is required to be a symbol
+        t.style = style
+      end
     end
     table.to_s
   rescue LoadError

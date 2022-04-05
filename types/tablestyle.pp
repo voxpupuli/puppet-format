@@ -7,6 +7,7 @@
     padding_left => Optional[Integer],
     padding_right => Optional[Integer],
     border_x => Optional[String],
-    border_i => Optional[String]
+    border_i => Optional[String],
+    border => Optional[String]
   }
 ]
