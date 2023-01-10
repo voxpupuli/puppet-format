@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @summary Turns arrays into a table formatted string for human consumption
 #
 #
