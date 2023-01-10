@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @summary Turns any string into a string with colors
 #
 #
