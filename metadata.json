@@ -5,9 +5,7 @@
   "summary": "Puppet formatting functions to transform text into rich text",
   "license": "Apache-2.0",
   "source": "https://github.com/voxpupuli/puppet-format.git",
-  "dependencies": [
-
-  ],
+  "dependencies": [],
   "operatingsystem_support": [
     {
       "operatingsystem": "CentOS",
@@ -80,7 +78,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 6.1.0 < 8.0.0"
+      "version_requirement": ">= 7.0.0 < 8.0.0"
     }
   ],
   "pdk-version": "1.17.0",
