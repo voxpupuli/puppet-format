@@ -32,7 +32,14 @@ This module includes functions and datatypes only.
 
 ### Setup Requirements
 
-Bolt and Puppet
+This module requires the `terminal-table` gem. It's a direct dependency for
+bolt, so open source users don't need to install additional gems. For PE users
+that want to use the function, they need to install terminal-table for the
+orchestrator:
+
+```
+GEM_PATH=/opt/puppetlabs/server/apps/bolt-server/lib/ruby GEM_HOME=/opt/puppetlabs/server/apps/bolt-server/lib/ruby /opt/puppetlabs/puppet/bin/gem install terminal-table --no-document
+```
 
 ## Usage
 
