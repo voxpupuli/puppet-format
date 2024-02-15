@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v1.1.1](https://github.com/voxpupuli/puppet-format/tree/v1.1.1) (2024-02-15)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v1.1.0...v1.1.1)
+
+**Fixed bugs:**
+
+- Move image to images/ use absolute URL in README.md [\#21](https://github.com/voxpupuli/puppet-format/pull/21) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v1.1.0](https://github.com/voxpupuli/puppet-format/tree/v1.1.0) (2024-02-15)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v1.0.0...v1.1.0)
