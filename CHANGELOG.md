@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v1.1.0](https://github.com/voxpupuli/puppet-format/tree/v1.1.0) (2024-02-15)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v1.0.0...v1.1.0)
+
+**Breaking changes:**
+
+- Drop Puppet 6 support [\#13](https://github.com/voxpupuli/puppet-format/pull/13) ([bastelfreak](https://github.com/bastelfreak))
+
+**Implemented enhancements:**
+
+- Document PE installation constraints [\#18](https://github.com/voxpupuli/puppet-format/pull/18) ([bastelfreak](https://github.com/bastelfreak))
+- Add Puppet 8 support [\#15](https://github.com/voxpupuli/puppet-format/pull/15) ([bastelfreak](https://github.com/bastelfreak))
+- Support the :border style option [\#10](https://github.com/voxpupuli/puppet-format/pull/10) ([reidmv](https://github.com/reidmv))
+
 ## [v1.0.0](https://github.com/voxpupuli/puppet-format/tree/v1.0.0) (2021-06-16)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v0.1.1...v1.0.0)
