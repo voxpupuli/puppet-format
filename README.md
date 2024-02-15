@@ -82,4 +82,4 @@ Which produces a table like:
 
 Or with colors
 
-![](table_format.png)
+![](https://github.com/voxpupuli/puppet-format/blob/master/images/table_format.png)
