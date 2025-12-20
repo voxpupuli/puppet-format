@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.0.0](https://github.com/voxpupuli/puppet-format/tree/v2.0.0) (2025-12-20)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v1.1.1...v2.0.0)
+
+**Breaking changes:**
+
+- Drop support for CentOS/RedHat 7, add support for CentOS/RedHat 9 [\#37](https://github.com/voxpupuli/puppet-format/pull/37) ([corporate-gadfly](https://github.com/corporate-gadfly))
+- Drop puppet, update openvox minimum version to 8.19 [\#34](https://github.com/voxpupuli/puppet-format/pull/34) ([TheMeier](https://github.com/TheMeier))
+
+**Implemented enhancements:**
+
+- metadata.json: Add OpenVox [\#32](https://github.com/voxpupuli/puppet-format/pull/32) ([jstraw](https://github.com/jstraw))
+
 ## [v1.1.1](https://github.com/voxpupuli/puppet-format/tree/v1.1.1) (2024-02-15)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-format/compare/v1.1.0...v1.1.1)
