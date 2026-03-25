@@ -49,6 +49,7 @@ formatted data ready to be sent to stdout or stderr.
 ### Functions
 
 * format::colorize("string", red) # options include red, green, yellow, fatal, warning, good.
+* format::indent("red\ngreen\nblue\n", '  ')
 * format::table([['one', 1], ['two', 2]])
 
 The print_table function wraps the [Terminal-Table](https://github.com/tj/terminal-table) ruby gem in a function

@@ -7,10 +7,12 @@
 ### Functions
 
 * [`format::colorize`](#format--colorize): Turns any string into a string with colors
+* [`format::indent`](#format--indent): Indent a block of text
 * [`format::table`](#format--table): Turns arrays into a table formatted string for human consumption
 
 ### Data types
 
+* [`Format::IndentOptions`](#Format--IndentOptions): format::indent() options argument type
 * [`Format::TableRows`](#Format--TableRows)
 * [`Format::TableStyle`](#Format--TableStyle)
 * [`Format::TerminalTable`](#Format--TerminalTable)
@@ -93,6 +95,68 @@ Data type: `Integer`
 
 The color you want to color it.
 
+### <a name="format--indent"></a>`format::indent`
+
+Type: Ruby 4.x API
+
+Indent a block of text
+
+#### Examples
+
+##### Indent the text with 2 spaces
+
+```puppet
+$indented_text = format::indent($text, '  ')
+```
+
+##### Indent the text with 2 spaces ignoring empty lines
+
+```puppet
+$indented_text = format::indent($text, '  ', ignore_empty => true)
+```
+
+#### `format::indent(String $text, String $indent, Optional[Format::IndentOptions] $options)`
+
+The format::indent function.
+
+Returns: `String` The indented text.
+
+##### Examples
+
+###### Indent the text with 2 spaces
+
+```puppet
+$indented_text = format::indent($text, '  ')
+```
+
+###### Indent the text with 2 spaces ignoring empty lines
+
+```puppet
+$indented_text = format::indent($text, '  ', ignore_empty => true)
+```
+
+##### `text`
+
+Data type: `String`
+
+The text you wish to indent.
+
+##### `indent`
+
+Data type: `String`
+
+The string you want to indent the text with.
+
+##### `options`
+
+Data type: `Optional[Format::IndentOptions]`
+
+A Hash of additional options
+
+Options:
+
+* **ignore_empty** `Boolean`: Whether to skip indenting empty lines
+
 ### <a name="format--table"></a>`format::table`
 
 Type: Ruby 4.x API
@@ -163,6 +227,18 @@ Data type: `Format::TerminalTable`
 That data and other settings you wish to produce a table with.
 
 ## Data types
+
+### <a name="Format--IndentOptions"></a>`Format::IndentOptions`
+
+format::indent() options argument type
+
+Alias of
+
+```puppet
+Struct[{
+  Optional[ignore_empty] => Boolean,
+}]
+```
 
 ### <a name="Format--TableRows"></a>`Format::TableRows`
 
