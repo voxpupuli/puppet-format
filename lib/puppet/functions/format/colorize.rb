@@ -5,7 +5,7 @@
 #
 # Useful when dumping text to the console with flying colors.  Normally this would
 # only be used for puppet types like plans and other scenarios where text can be displayed
-# directory on the console.
+# directly on the console.
 #
 # @example Calling the function
 #   $red_string = colorize('red alert', red)
