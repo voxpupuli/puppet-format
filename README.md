@@ -49,6 +49,7 @@ formatted data ready to be sent to stdout or stderr.
 ### Functions
 
 * format::colorize("string", red) # options include red, green, yellow, fatal, warning, good.
+* format::decorate("/!\\", ['bold','underline'])
 * format::indent("red\ngreen\nblue\n", '  ')
 * format::table([['one', 1], ['two', 2]])
 
