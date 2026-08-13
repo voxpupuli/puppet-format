@@ -7,11 +7,13 @@
 ### Functions
 
 * [`format::colorize`](#format--colorize): Turns any string into a string with colors
+* [`format::decorate`](#format--decorate): Turns any string into a string with font effects applied
 * [`format::indent`](#format--indent): Indent a block of text
 * [`format::table`](#format--table): Turns arrays into a table formatted string for human consumption
 
 ### Data types
 
+* [`Format::FontEffect`](#Format--FontEffect): format::decorate() font effects
 * [`Format::IndentOptions`](#Format--IndentOptions): format::indent() options argument type
 * [`Format::TableRows`](#Format--TableRows)
 * [`Format::TableStyle`](#Format--TableStyle)
@@ -94,6 +96,68 @@ The string you wish to colorize.
 Data type: `Integer`
 
 The color you want to color it.
+
+### <a name="format--decorate"></a>`format::decorate`
+
+Type: Ruby 4.x API
+
+To only be used in puppet plans and other scenarios, where text can be
+displayed directly on the console.
+
+#### Examples
+
+##### Calling the function
+
+```puppet
+$bold_string = format::decorate('hello', ['bold']) # or 'b'
+$dim_string = format::decorate('hello', ['dim'])
+$italic_string = format::decorate('hello', ['italic']) # or 'i'
+$underscored_string = format::decorate('hello', ['underscore']) # or 'u'
+$slowly_blinking_string = format::decorate('hello', ['blink'])
+$rapidly_blinking_string = format::decorate('hello', ['blink_rapid'])
+$inversed_string = format::decorate('hello', ['inverse'])
+$concealed_string = format::decorate('hello', ['conceal'])
+$strikedthrough_string = format::decorate('hello', ['strikethrough']) # or 's'
+$double_underlined_string = format::decorate('hello', ['double_underscore'])
+$overlined_string = format::decorate('hello', ['overline'])
+```
+
+#### `format::decorate(String $data, Array[Format::FontEffect] $effects)`
+
+To only be used in puppet plans and other scenarios, where text can be
+displayed directly on the console.
+
+Returns: `String` The supplied string surrounded with font effect codes.
+
+##### Examples
+
+###### Calling the function
+
+```puppet
+$bold_string = format::decorate('hello', ['bold']) # or 'b'
+$dim_string = format::decorate('hello', ['dim'])
+$italic_string = format::decorate('hello', ['italic']) # or 'i'
+$underscored_string = format::decorate('hello', ['underscore']) # or 'u'
+$slowly_blinking_string = format::decorate('hello', ['blink'])
+$rapidly_blinking_string = format::decorate('hello', ['blink_rapid'])
+$inversed_string = format::decorate('hello', ['inverse'])
+$concealed_string = format::decorate('hello', ['conceal'])
+$strikedthrough_string = format::decorate('hello', ['strikethrough']) # or 's'
+$double_underlined_string = format::decorate('hello', ['double_underscore'])
+$overlined_string = format::decorate('hello', ['overline'])
+```
+
+##### `data`
+
+Data type: `String`
+
+The string you wish to decorate.
+
+##### `effects`
+
+Data type: `Array[Format::FontEffect]`
+
+The array of font effects to apply.
 
 ### <a name="format--indent"></a>`format::indent`
 
@@ -227,6 +291,12 @@ Data type: `Format::TerminalTable`
 That data and other settings you wish to produce a table with.
 
 ## Data types
+
+### <a name="Format--FontEffect"></a>`Format::FontEffect`
+
+format::decorate() font effects
+
+Alias of `Enum['bold', 'b', 'dim', 'italic', 'i', 'underscore', 'underline', 'u', 'blink_slow', 'blink', 'blink_rapid', 'reverse', 'inverse', 'conceal', 'hide', 'strikethrough', 's', 'double_underscore', 'double_underline', 'du', 'overline']`
 
 ### <a name="Format--IndentOptions"></a>`Format::IndentOptions`
 
