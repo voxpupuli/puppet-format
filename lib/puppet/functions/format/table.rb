@@ -6,7 +6,7 @@
 # Useful when dumping text to the console in a nice table format.  Normally this would
 # only be used for puppet types like plans and other scenarios where text can be displayed
 # directory on the console.
-# @See https://github.com/tj/terminal-table for more information.
+# @see https://github.com/tj/terminal-table for more information.
 #
 # @example Calling the function
 #   $t = format::table([['one', 1], ['two', 2]])
