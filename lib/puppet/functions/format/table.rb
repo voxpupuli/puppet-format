@@ -5,7 +5,8 @@
 #
 # Useful when dumping text to the console in a nice table format.  Normally this would
 # only be used for puppet types like plans and other scenarios where text can be displayed
-# directory on the console.
+# directly on the console.
+#
 # @see https://github.com/tj/terminal-table for more information.
 #
 # @example Calling the function

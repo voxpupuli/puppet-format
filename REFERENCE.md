@@ -25,7 +25,7 @@ Type: Ruby 4.x API
 
 Useful when dumping text to the console with flying colors.  Normally this would
 only be used for puppet types like plans and other scenarios where text can be displayed
-directory on the console.
+directly on the console.
 
 #### Examples
 
@@ -163,7 +163,7 @@ Type: Ruby 4.x API
 
 Useful when dumping text to the console in a nice table format.  Normally this would
 only be used for puppet types like plans and other scenarios where text can be displayed
-directory on the console.
+directly on the console.
 
 * **Note** For a list of style options that can be supplied please see the tablestyle datatype.
 
